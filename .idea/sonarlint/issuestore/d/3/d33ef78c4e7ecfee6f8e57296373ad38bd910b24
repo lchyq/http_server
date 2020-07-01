@@ -1,0 +1,8 @@
+
+Fsquid:S00108")Either remove or fill this block of code.(”ı¾8Ûîó°.
+Msquid:S1481"1Remove this unused "serverSocket" local variable.(®Ã—û8½•ó°.
+\squid:S1854"@Remove this useless assignment to local variable "serverSocket".(®Ã—û8½•ó°.
+Jsquid:S1068",Remove this unused "SHUTDOWN" private field.(ì›«8Œœæ°.
+fsquid:S2095"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(®Ã—û8½•ó°.
+Ksquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8Ê†õ°.
+Fsquid:S00108")Either remove or fill this block of code.(Úîø›8Ê†õ°.
