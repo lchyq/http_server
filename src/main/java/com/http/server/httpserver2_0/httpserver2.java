@@ -1,6 +1,5 @@
 package com.http.server.httpserver2_0;
 
-import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -35,6 +34,9 @@ public class httpserver2 {
             String uri = request.getUri();
             if(uri.startsWith("/servlet")){
                 //servlet容器处理
+                ServletProcesser servletProcesser = new ServletProcesser();
+                servletProcesser.xml();
+                servletProcesser.process(request,response);
             }else{
                 //静态资源处理器处理
                 StaticResourceProcesser processer = new StaticResourceProcesser();

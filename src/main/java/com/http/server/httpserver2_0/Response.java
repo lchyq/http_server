@@ -60,7 +60,7 @@ public class Response implements ServletResponse {
 
     @Override
     public PrintWriter getWriter() throws IOException {
-        return null;
+        return new PrintWriter(outputStream,true);
     }
 
     @Override
