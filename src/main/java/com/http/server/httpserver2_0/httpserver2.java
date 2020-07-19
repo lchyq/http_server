@@ -18,7 +18,7 @@ public class httpserver2 {
     private static final boolean shutDown = false;
     private static final String shutContainer = "/shutDown";
     /**
-     * 主要作用是舰艇端口 接受http请求
+     * 主要作用是监听端口 接受http请求
      */
     public void await() throws Exception {
         serverSocket = new ServerSocket(port,backLog,InetAddress.getByName(bindAddress));
