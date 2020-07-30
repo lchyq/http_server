@@ -1,6 +1,7 @@
 package com.http.server.httpServer_4_0;
 
 import com.http.server.httpServer_4_0.rely.LifecycleException;
+import com.http.server.httpServer_5_0.simple.SimpleWapper;
 
 import java.io.IOException;
 
@@ -18,7 +19,7 @@ import java.io.IOException;
 public class BootStrap {
     public static void main(String[] args) throws LifecycleException, IOException {
         HttpConnector httpConnector = new HttpConnector();
-        DefaultContainer defaultContainer = new DefaultContainer();
+        SimpleWapper defaultContainer = new SimpleWapper();
         httpConnector.setContainer(defaultContainer);
 
         httpConnector.init();
