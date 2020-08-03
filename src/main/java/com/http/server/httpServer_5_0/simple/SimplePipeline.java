@@ -47,9 +47,9 @@ public class SimplePipeline {
         public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
             int cur = stage;
             stage = stage + 1;
-            if(stage <= values.size()){
+            if(cur < values.size()){
                 values.get(cur).invokeNext(httpRequest,httpResponse,this);
-            }else if(stage == values.size() && baseValue != null){
+            }else if(cur <= values.size() && stage > values.size()){
                 baseValue.invokeNext(httpRequest,httpResponse,this);
             }
         }

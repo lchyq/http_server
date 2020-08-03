@@ -5,6 +5,7 @@ import com.http.server.httpServer_4_0.rely.Lifecycle;
 import com.http.server.httpServer_4_0.rely.LifecycleException;
 import com.http.server.httpServer_4_0.rely.LifecycleListener;
 import com.http.server.httpServer_5_0.simple.SimpleWapper;
+import com.http.server.httpServer_6_0.simple.SimpleContext;
 
 import java.io.IOException;
 import java.net.Inet4Address;
@@ -38,6 +39,8 @@ public class HttpConnector implements Runnable, Lifecycle {
     private ServerSocketFactory  serverSocketFactory;
     //默认容器
     private SimpleWapper container;
+    //默认容器
+    private SimpleContext context;
     //是否初始化
     private boolean inited = false;
     //是否停止
@@ -144,6 +147,13 @@ public class HttpConnector implements Runnable, Lifecycle {
     public void setContainer(SimpleWapper container){
         this.container = container;
     }
+    /**
+     * 绑定context容器
+     * @param container
+     */
+    public void setContainer(SimpleContext container){
+        this.context = container;
+    }
 
     /**
      * 开启
@@ -235,7 +245,7 @@ public class HttpConnector implements Runnable, Lifecycle {
         this.bufferSize = bufferSize;
     }
 
-    public SimpleWapper getContainer() {
-        return container;
+    public SimpleContext getContainer() {
+        return context;
     }
 }

@@ -4,6 +4,7 @@ import com.http.server.httpServer_4_0.response.HttpResponse;
 import com.http.server.httpServer_5_0.rely.Value;
 import com.http.server.httpServer_5_0.simple.loader.Loader;
 import com.http.server.httpServer_5_0.simple.value.BasicValue;
+import com.http.server.httpServer_6_0.rely.Containter;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
@@ -26,6 +27,9 @@ public class SimpleWapper {
     //servlet 名称
     private String servletName;
     private Servlet servlet;
+    //此处应该使用tomcat中的 container 接口替代
+    //此处省略，但是含义相同
+    private Containter parsent;
 
     /**
      * 构造方法用来初始化 pipeline 和 基础阈
@@ -54,7 +58,10 @@ public class SimpleWapper {
      * 该方法属于 container接口中的方法
      */
     public ClassLoader getLoader(){
-        return simpleLoader.getClassLoader();
+        if(simpleLoader != null){
+            return simpleLoader.getClassLoader();
+        }
+        return parsent.getLoader().getClassLoader();
     }
 
     /**
@@ -94,7 +101,23 @@ public class SimpleWapper {
         if(servlet != null){
             return servlet;
         }
-        servlet = (Servlet) simpleLoader.load(servletName);
-        return servlet;
+        Class clazz = getLoader().loadClass(servletName);
+        return (Servlet)clazz.newInstance();
+    }
+
+    /**
+     * 设置父容器
+     * @param containter
+     */
+    public void setParsent(Containter containter){
+        this.parsent = containter;
+    }
+
+    /**
+     * 获取关联的父容器
+     * @return
+     */
+    public Containter getParsent(){
+        return parsent;
     }
 }
