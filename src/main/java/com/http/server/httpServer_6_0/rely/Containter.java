@@ -4,6 +4,7 @@ import com.http.server.httpServer_4_0.request.HttpRequest;
 import com.http.server.httpServer_4_0.response.HttpResponse;
 import com.http.server.httpServer_5_0.simple.SimpleWapper;
 import com.http.server.httpServer_5_0.simple.loader.Loader;
+import com.http.server.httpServer_7_0.filter.config.GlobalApplicationFilterConfig;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
@@ -11,7 +12,7 @@ import java.io.IOException;
 /**
  * container接口
  * 该接口应该是由 tomcat提供
- * 此处仅仅知识模拟 做学习使用
+ * 此处仅仅只是模拟 做学习使用
  */
 public interface Containter {
     void setLoader(Loader loader);
@@ -25,4 +26,6 @@ public interface Containter {
     //此处做简化处理
     void addChild(String servletName, SimpleWapper containter);
     SimpleWapper findChild(String servletName);
+    void setFilterConfig(GlobalApplicationFilterConfig globalApplicationFilterConfig);
+
 }
