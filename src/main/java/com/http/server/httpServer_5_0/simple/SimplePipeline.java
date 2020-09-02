@@ -4,6 +4,7 @@ import com.http.server.httpServer_4_0.request.HttpRequest;
 import com.http.server.httpServer_4_0.response.HttpResponse;
 import com.http.server.httpServer_5_0.rely.Value;
 import com.http.server.httpServer_5_0.rely.ValueContext;
+import com.http.server.httpServer_6_0.rely.Containter;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
@@ -26,6 +27,7 @@ public class SimplePipeline {
     //此处的simpleWapper 应该是tomcat中的 Container接口
     //此处简单实用 simpleWapper来表示
     private SimpleWapper container;
+    private Containter containter;
     public SimplePipeline(SimpleWapper container){
         values = new ArrayList<>();
         this.container = container;

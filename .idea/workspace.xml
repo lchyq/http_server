@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8367e9c8-777c-4e47-8dc0-64cf0c199386" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/BootStrap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/rely/Containter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/rely/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContextPipeline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SImpleContextValueOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SImpleContextValueTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SimpleContextBasicValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="8367e9c8-777c-4e47-8dc0-64cf0c199386" name="Default Changelist" comment="实现context容器，代表一个独立的应用，包含多个servlet">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/BasicValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/FilterDef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/SimplePipeline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/SimpleStandardWapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/HttpConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/HttpConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimplePipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimplePipeline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimpleWapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimpleWapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/loader/SimpleLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/loader/SimpleLoader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,209 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimpleWapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/value/BasicValue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/bootstrap/BootStrap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/BootStrap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/com.http.server.httpServer_6_0.value.SimpleContextBasicValue">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>com.http.server.httpServer_6_0.value.SimpleContextBasicValue</OriginalElement>
-              <nodes>
-                <node x="421.0" y="80.0">com.http.server.httpServer_6_0.value.SImpleContextValueOne</node>
-                <node x="208.0" y="80.0">com.http.server.httpServer_6_0.value.SimpleContextBasicValue</node>
-                <node x="264.5" y="0.0">com.http.server.httpServer_5_0.rely.Value</node>
-                <node x="0.0" y="80.0">com.http.server.httpServer_6_0.value.SImpleContextValueTwo</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="com.http.server.httpServer_6_0.value.SImpleContextValueOne" target="com.http.server.httpServer_5_0.rely.Value">
-                  <point x="0.0" y="-15.0" />
-                  <point x="515.0" y="55.0" />
-                  <point x="331.1666666666667" y="55.0" />
-                  <point x="26.666666666666686" y="15.0" />
-                </edge>
-                <edge source="com.http.server.httpServer_6_0.value.SImpleContextValueTwo" target="com.http.server.httpServer_5_0.rely.Value">
-                  <point x="0.0" y="-15.0" />
-                  <point x="94.0" y="55.0" />
-                  <point x="277.8333333333333" y="55.0" />
-                  <point x="-26.666666666666686" y="15.0" />
-                </edge>
-                <edge source="com.http.server.httpServer_6_0.value.SimpleContextBasicValue" target="com.http.server.httpServer_5_0.rely.Value">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-214.0" y="-82.5" />
-              <SelectedNodes>
-                <node>com.http.server.httpServer_6_0.value.SimpleContextBasicValue</node>
-              </SelectedNodes>
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/com.http.server.httpServer_6_0.BootStrap">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>com.http.server.httpServer_6_0.BootStrap</OriginalElement>
-              <nodes>
-                <node x="0.0" y="0.0">com.http.server.httpServer_6_0.BootStrap</node>
-              </nodes>
-              <notes />
-              <edges />
-              <settings layout="Hierarchic Group" zoom="1.0" x="-465.0" y="-122.5" />
-              <SelectedNodes />
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="uml://JAVA/com.http.server.httpServer_6_0.simple.SimpleContextPipeline">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>com.http.server.httpServer_6_0.simple.SimpleContextPipeline</OriginalElement>
-              <nodes>
-                <node x="421.0" y="80.0">com.http.server.httpServer_6_0.value.SImpleContextValueOne</node>
-                <node x="208.0" y="80.0">com.http.server.httpServer_6_0.value.SimpleContextBasicValue</node>
-                <node x="264.5" y="0.0">com.http.server.httpServer_5_0.rely.Value</node>
-                <node x="0.0" y="310.0">com.http.server.httpServer_6_0.BootStrap</node>
-                <node x="190.5" y="155.0">com.http.server.httpServer_6_0.rely.Containter</node>
-                <node x="19.5" y="155.0">com.http.server.httpServer_6_0.rely.Mapper</node>
-                <node x="0.0" y="235.0">com.http.server.httpServer_6_0.simple.SimpleMapper</node>
-                <node x="355.0" y="155.0">com.http.server.httpServer_6_0.simple.SimpleContextPipeline</node>
-                <node x="0.0" y="80.0">com.http.server.httpServer_6_0.value.SImpleContextValueTwo</node>
-                <node x="179.0" y="235.0">com.http.server.httpServer_6_0.simple.SimpleContext</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="com.http.server.httpServer_6_0.value.SImpleContextValueOne" target="com.http.server.httpServer_5_0.rely.Value">
-                  <point x="0.0" y="-15.0" />
-                  <point x="515.0" y="55.0" />
-                  <point x="331.1666666666667" y="55.0" />
-                  <point x="26.666666666666686" y="15.0" />
-                </edge>
-                <edge source="com.http.server.httpServer_6_0.simple.SimpleContext" target="com.http.server.httpServer_6_0.rely.Containter">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="com.http.server.httpServer_6_0.value.SImpleContextValueTwo" target="com.http.server.httpServer_5_0.rely.Value">
-                  <point x="0.0" y="-15.0" />
-                  <point x="94.0" y="55.0" />
-                  <point x="277.8333333333333" y="55.0" />
-                  <point x="-26.666666666666686" y="15.0" />
-                </edge>
-                <edge source="com.http.server.httpServer_6_0.simple.SimpleMapper" target="com.http.server.httpServer_6_0.rely.Mapper">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="com.http.server.httpServer_6_0.value.SimpleContextBasicValue" target="com.http.server.httpServer_5_0.rely.Value">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="359.7857142857142" y="247.6428571428571" />
-              <SelectedNodes />
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#findServletMapping#0;class#SimpleContext#0" />
-                <element signature="method#findChild#0;class#SimpleContext#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/loader/SimpleLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#867#868#0" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -252,7 +42,11 @@
       <find>ContentLength</find>
       <find>cookie</find>
       <find>setport</find>
+      <find>allocat</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -260,13 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/http/RequestUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/http/HttpRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/HttpProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/HttpConnector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpserver1_0/Response.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/Container.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/relyOn/Container.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/rely/Lifecycle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/rely/LifecycleListener.java" />
@@ -305,12 +92,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SImpleContextValueOne.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SImpleContextValueTwo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContextPipeline.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimplePipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/loader/SimpleLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimpleWapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/BootStrap.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpserver1_0/Request.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/http/server/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimplePipeline.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/FilterDef.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/BasicValue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/SimplePipeline.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/SimpleStandardWapper.java" />
       </list>
     </option>
   </component>
@@ -346,6 +140,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -387,57 +182,19 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="httpServer_6_0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="httpserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="httpServer_6_0" type="462c0819:PsiDirectoryNode" />
-              <item name="rely" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="httpserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="httpServer_6_0" type="462c0819:PsiDirectoryNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="httpserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="httpServer_6_0" type="462c0819:PsiDirectoryNode" />
-              <item name="value" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="httpserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="httpServer_7_0" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596442681445" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599031429317" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../HowTomcatWorks" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -478,7 +235,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BootStrap (2)">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.http.server.App" />
+      <module name="httpserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.http.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BootStrap (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.http.server.httpServer_5_0.simple.bootstrap.BootStrap" />
       <module name="httpserver" />
@@ -505,12 +275,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.http.server.httpserver_3_0.HttpServer" />
+    <configuration name="HttpServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.http.server.httpserver1_0.HttpServer" />
       <module name="httpserver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.http.server.httpserver_3_0.*" />
+          <option name="PATTERN" value="com.http.server.httpserver1_0.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -531,26 +301,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="httpserver2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.http.server.httpserver2_0.httpserver2" />
-      <module name="httpserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.http.server.httpserver2_0.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.HttpServer" />
         <item itemvalue="Application.BootStrap (2)" />
         <item itemvalue="Application.BootStrap (1)" />
         <item itemvalue="Application.SimpleWapper" />
-        <item itemvalue="Application.httpserver2" />
-        <item itemvalue="Application.HttpServer (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -579,7 +336,20 @@
       <workItem from="1595727621793" duration="15124000" />
       <workItem from="1595814924968" duration="32313000" />
       <workItem from="1596178136815" duration="12344000" />
-      <workItem from="1596436323245" duration="2798000" />
+      <workItem from="1596436323245" duration="3511000" />
+      <workItem from="1596678311893" duration="595000" />
+      <workItem from="1596892789049" duration="14000" />
+      <workItem from="1597025301094" duration="17000" />
+      <workItem from="1597029433939" duration="10205000" />
+      <workItem from="1597303895546" duration="76000" />
+      <workItem from="1597750981197" duration="536000" />
+      <workItem from="1597817520006" duration="377000" />
+      <workItem from="1597840424081" duration="7114000" />
+      <workItem from="1598234882578" duration="1764000" />
+      <workItem from="1598261898203" duration="173000" />
+      <workItem from="1598511504391" duration="3286000" />
+      <workItem from="1598520103270" duration="6000" />
+      <workItem from="1598842757409" duration="14463000" />
     </task>
     <task id="LOCAL-00001" summary="ignore文件">
       <created>1593607399268</created>
@@ -630,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1596106027026</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="实现context容器，代表一个独立的应用，包含多个servlet">
+      <created>1596442755289</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596442755289</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124921000" />
+    <option name="totallyTimeSpent" value="164260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,9 +424,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23400854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -658,7 +434,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.34056398" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12472885" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.03253796" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31019524" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -732,7 +508,8 @@
     <MESSAGE value="HTTP SERVER 4.0 池化 httpProcessor 支持同时处理多个请求，简单模拟一个container" />
     <MESSAGE value="测试http信息" />
     <MESSAGE value="实现wapper容器，代表一个独立的servlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现wapper容器，代表一个独立的servlet" />
+    <MESSAGE value="实现context容器，代表一个独立的应用，包含多个servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现context容器，代表一个独立的应用，包含多个servlet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,12 +641,6 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimplePipeline.java</url>
-          <line>35</line>
-          <properties />
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/HttpProcessor.java</url>
           <line>111</line>
           <properties />
@@ -901,7 +672,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimplePipeline.java</url>
-          <line>48</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
@@ -912,115 +683,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/net/DualStackPlainSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="282" column="22" selection-start-line="282" selection-start-column="22" selection-end-line="282" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver2_0/ServletProcesser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="32" column="82" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/request/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
-          <folding>
-            <element signature="docComment;class#HttpRequest#0" />
-            <element signature="e#1950#1951#0" expanded="true" />
-            <element signature="e#1977#1978#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../apache-maven-3.5.2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/ServletResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver2_0/servlet/MyServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/response/HttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="139" column="57" selection-start-line="139" selection-start-column="57" selection-end-line="139" selection-end-column="57" />
-          <folding>
-            <element signature="docComment;class#HttpResponse#0" />
-            <element signature="method#addCookie#0;class#HttpResponse#0" />
-            <element signature="method#sendError#0;class#HttpResponse#0" />
-            <element signature="method#sendError#1;class#HttpResponse#0" />
-            <element signature="method#sendRedirect#0;class#HttpResponse#0" />
-            <element signature="method#setDateHeader#0;class#HttpResponse#0" />
-            <element signature="e#3293#3294#0" expanded="true" />
-            <element signature="e#3329#3330#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/stream/HttpRequestLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/stream/StringManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="248" column="51" selection-start-line="248" selection-start-column="51" selection-end-line="248" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/stream/SocketInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4255">
-          <caret line="289" column="27" lean-forward="true" selection-start-line="289" selection-start-column="27" selection-end-line="289" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#readRequestLine#0;class#SocketInputStream#0" />
-            <element signature="e#13792#13880#1" />
-            <element signature="method#available#0;class#SocketInputStream#0" />
-            <element signature="method#close#0;class#SocketInputStream#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/HttpConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/HttpProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
-          <folding>
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="method#paresRequest#0;class#HttpProcessor#0" />
-            <element signature="method#parseSessionId#0;class#HttpProcessor#0" />
-            <element signature="method#parseQueryString#0;class#HttpProcessor#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver_3_0/HttpServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -1165,122 +827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/rely/Mapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/rely/Containter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/rely/Value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/HttpConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3996">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-          <folding>
-            <element signature="docComment;class#HttpConnector#0" />
-            <element signature="method#addLifecycleListener#0;class#HttpConnector#0" />
-            <element signature="method#removeLifecycleListener#0;class#HttpConnector#0" />
-            <element signature="method#stop#0;class#HttpConnector#0" />
-            <element signature="docComment;method#open#0;class#HttpConnector#0" />
-            <element signature="docComment;class#ServerSocketFactory#0;class#HttpConnector#0" />
-            <element signature="class#ServerSocketFactory#0;class#HttpConnector#0" />
-            <element signature="docComment;method#recycle#0;class#HttpConnector#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13098">
           <caret line="381" column="29" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/rely/ValueContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/HttpProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#HttpProcessor#1;class#HttpProcessor#0" />
-            <element signature="method#start#0;class#HttpProcessor#0" />
-            <element signature="method#parseHeader#0;class#HttpProcessor#0" />
-            <element signature="method#parseRequest#0;class#HttpProcessor#0" />
-            <element signature="method#parseConnection#0;class#HttpProcessor#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SImpleContextValueOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SImpleContextValueTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContextPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SimpleContextBasicValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1294,47 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimplePipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="method#SimplePipeline#0;class#SimplePipeline#0" />
-            <element signature="docComment;method#addValue#0;class#SimplePipeline#0" />
-            <element signature="docComment;method#removeValue#0;class#SimplePipeline#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/loader/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/loader/SimpleLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/value/BasicValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/bootstrap/BootStrap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1342,45 +851,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimpleWapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#findServletMapping#0;class#SimpleContext#0" />
-            <element signature="method#findChild#0;class#SimpleContext#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/BootStrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1414,7 +884,7 @@
               <point x="0.0" y="15.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-214.0" y="-82.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-214.0" y="-82.0" />
           <SelectedNodes>
             <node>com.http.server.httpServer_6_0.value.SimpleContextBasicValue</node>
           </SelectedNodes>
@@ -1434,8 +904,10 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-465.0" y="-122.5" />
-          <SelectedNodes />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-465.0" y="-122.0" />
+          <SelectedNodes>
+            <node>com.http.server.httpServer_6_0.BootStrap</node>
+          </SelectedNodes>
           <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
@@ -1448,7 +920,7 @@
           <ID>JAVA</ID>
           <OriginalElement>com.http.server.httpServer_6_0.simple.SimpleContextPipeline</OriginalElement>
           <nodes>
-            <node x="421.0" y="80.0">com.http.server.httpServer_6_0.value.SImpleContextValueOne</node>
+            <node x="0.0" y="80.0">com.http.server.httpServer_6_0.value.SImpleContextValueOne</node>
             <node x="208.0" y="80.0">com.http.server.httpServer_6_0.value.SimpleContextBasicValue</node>
             <node x="264.5" y="0.0">com.http.server.httpServer_5_0.rely.Value</node>
             <node x="0.0" y="310.0">com.http.server.httpServer_6_0.BootStrap</node>
@@ -1456,16 +928,16 @@
             <node x="19.5" y="155.0">com.http.server.httpServer_6_0.rely.Mapper</node>
             <node x="0.0" y="235.0">com.http.server.httpServer_6_0.simple.SimpleMapper</node>
             <node x="355.0" y="155.0">com.http.server.httpServer_6_0.simple.SimpleContextPipeline</node>
-            <node x="0.0" y="80.0">com.http.server.httpServer_6_0.value.SImpleContextValueTwo</node>
+            <node x="421.0" y="80.0">com.http.server.httpServer_6_0.value.SImpleContextValueTwo</node>
             <node x="179.0" y="235.0">com.http.server.httpServer_6_0.simple.SimpleContext</node>
           </nodes>
           <notes />
           <edges>
             <edge source="com.http.server.httpServer_6_0.value.SImpleContextValueOne" target="com.http.server.httpServer_5_0.rely.Value">
               <point x="0.0" y="-15.0" />
-              <point x="515.0" y="55.0" />
-              <point x="331.1666666666667" y="55.0" />
-              <point x="26.666666666666686" y="15.0" />
+              <point x="94.0" y="55.0" />
+              <point x="277.8333333333333" y="55.0" />
+              <point x="-26.666666666666686" y="15.0" />
             </edge>
             <edge source="com.http.server.httpServer_6_0.simple.SimpleContext" target="com.http.server.httpServer_6_0.rely.Containter">
               <point x="0.0" y="-15.0" />
@@ -1473,9 +945,9 @@
             </edge>
             <edge source="com.http.server.httpServer_6_0.value.SImpleContextValueTwo" target="com.http.server.httpServer_5_0.rely.Value">
               <point x="0.0" y="-15.0" />
-              <point x="94.0" y="55.0" />
-              <point x="277.8333333333333" y="55.0" />
-              <point x="-26.666666666666686" y="15.0" />
+              <point x="515.0" y="55.0" />
+              <point x="331.1666666666667" y="55.0" />
+              <point x="26.666666666666686" y="15.0" />
             </edge>
             <edge source="com.http.server.httpServer_6_0.simple.SimpleMapper" target="com.http.server.httpServer_6_0.rely.Mapper">
               <point x="0.0" y="-15.0" />
@@ -1486,11 +958,338 @@
               <point x="0.0" y="15.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="359.7857142857142" y="247.6428571428571" />
-          <SelectedNodes />
+          <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="-11.0" y="149.0" />
+          <SelectedNodes>
+            <node>com.http.server.httpServer_6_0.simple.SimpleContextPipeline</node>
+          </SelectedNodes>
           <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/math/BigDecimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="2303" column="28" selection-start-line="2303" selection-start-column="28" selection-end-line="2303" selection-end-column="28" />
+          <folding>
+            <element signature="e#67977#67978#0" expanded="true" />
+            <element signature="e#68041#68042#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver1_0/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <element signature="method#sendStaticSource#0;class#Response#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver1_0/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpserver1_0/HttpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/BootStrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/HttpConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="136" column="50" lean-forward="true" selection-start-line="136" selection-start-column="50" selection-end-line="136" selection-end-column="50" />
+          <folding>
+            <element signature="docComment;class#HttpConnector#0" />
+            <element signature="method#addLifecycleListener#0;class#HttpConnector#0" />
+            <element signature="method#removeLifecycleListener#0;class#HttpConnector#0" />
+            <element signature="method#stop#0;class#HttpConnector#0" />
+            <element signature="e#4460#4461#0" expanded="true" />
+            <element signature="e#4500#4501#0" expanded="true" />
+            <element signature="docComment;method#open#0;class#HttpConnector#0" />
+            <element signature="docComment;class#ServerSocketFactory#0;class#HttpConnector#0" />
+            <element signature="docComment;method#recycle#0;class#HttpConnector#0" />
+            <element signature="e#5738#5739#0" expanded="true" />
+            <element signature="e#5788#5789#0" expanded="true" />
+            <element signature="e#6759#6760#0" expanded="true" />
+            <element signature="e#6789#6790#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_4_0/HttpProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="111" column="40" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#parseHeader#0;class#HttpProcessor#0" />
+            <element signature="method#parseRequest#0;class#HttpProcessor#0" />
+            <element signature="method#parseConnection#0;class#HttpProcessor#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SImpleContextValueTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/rely/Mapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SimpleContextBasicValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="27" column="70" lean-forward="true" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/rely/ValueContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContextPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/value/SImpleContextValueOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/loader/SimpleLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/loader/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../apache-maven-3.5.2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/Filter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/simple/SimpleContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2010#2011#0" expanded="true" />
+            <element signature="e#2065#2066#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimpleWapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/SimplePipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="docComment;method#addValue#0;class#SimplePipeline#0" />
+            <element signature="docComment;method#removeValue#0;class#SimplePipeline#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/rely/Value.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/FilterDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1168#1169#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/BasicValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_5_0/simple/value/BasicValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_6_0/rely/Containter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/SimplePipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="47" column="74" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#SimplePipeline#0;class#SimplePipeline#0" />
+            <element signature="method#invoke#0;class#SimplePipeline#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/http/server/httpServer_7_0/SimpleStandardWapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1975">
+          <caret line="96" column="130" selection-start-line="96" selection-start-column="130" selection-end-line="96" selection-end-column="130" />
+          <folding>
+            <element signature="method#SimpleStandardWapper#0;class#SimpleStandardWapper#0" />
+            <element signature="method#getLoader#0;class#SimpleStandardWapper#0" />
+            <element signature="method#invoke#0;class#SimpleStandardWapper#0" />
+            <element signature="method#allocate#0;class#SimpleStandardWapper#0" />
+          </folding>
         </state>
       </provider>
     </entry>
