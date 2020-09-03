@@ -7,6 +7,8 @@ import com.http.server.httpServer_5_0.simple.SimpleWapper;
 import com.http.server.httpServer_5_0.simple.loader.Loader;
 import com.http.server.httpServer_6_0.rely.Containter;
 import com.http.server.httpServer_6_0.rely.Mapper;
+import com.http.server.httpServer_7_0.SimpleStandardWapper;
+import com.http.server.httpServer_7_0.filter.config.GlobalApplicationFilterConfig;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
@@ -30,7 +32,8 @@ public class SimpleContext implements Containter {
     // servlet映射
     private Map<String,String> servletMapping;
     //wapper映射
-    private Map<String,SimpleWapper> wapperMapping;
+    private Map<String, SimpleStandardWapper> wapperMapping;
+    private GlobalApplicationFilterConfig globalApplicationFilterConfig;
 
     public SimpleContext(){
         simpleContextPipeline = new SimpleContextPipeline(this);
@@ -59,12 +62,12 @@ public class SimpleContext implements Containter {
     }
 
     //寻找子容器
-    public SimpleWapper map(HttpRequest httpRequest, HttpResponse httpResponse){
+    public SimpleStandardWapper map(HttpRequest httpRequest, HttpResponse httpResponse){
         return mapper.map(httpRequest,httpResponse);
     }
 
     //处理请求
-    public void invoke(HttpRequest httpRequest,HttpResponse httpResponse) throws ClassNotFoundException, IOException, InstantiationException, ServletException, IllegalAccessException {
+    public void invoke(HttpRequest httpRequest,HttpResponse httpResponse) throws ClassNotFoundException, IOException, InstantiationException, ServletException, IllegalAccessException, InterruptedException {
         simpleContextPipeline.invoke(httpRequest,httpResponse);
     }
 
@@ -83,18 +86,28 @@ public class SimpleContext implements Containter {
     }
 
     @Override
-    public void addChild(String servletName, SimpleWapper simpleWapper) {
-        simpleWapper.setParsent(this);
+    public void addChild(String servletName, SimpleStandardWapper simpleWapper) {
+        simpleWapper.setParent(this);
         wapperMapping.put(servletName,simpleWapper);
     }
 
     @Override
-    public SimpleWapper findChild(String servletName) {
-        SimpleWapper wapper = wapperMapping.get(servletName);
+    public SimpleStandardWapper findChild(String servletName) {
+        SimpleStandardWapper wapper = wapperMapping.get(servletName);
         if(wapper != null){
             return wapper;
         }
         return null;
+    }
+
+    @Override
+    public void setFilterConfig(GlobalApplicationFilterConfig globalApplicationFilterConfig) {
+        this.globalApplicationFilterConfig = globalApplicationFilterConfig;
+    }
+
+    @Override
+    public GlobalApplicationFilterConfig getGlobalApplicationFilterConfig() {
+        return this.globalApplicationFilterConfig;
     }
 
     public void addValue(Value value){

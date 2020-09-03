@@ -96,7 +96,7 @@ public class HttpProcessor implements Runnable {
      * 解析http请求 填充 httpRequest 和 httpResponse
      * @param socket
      */
-    private void process(Socket socket) throws IOException, ClassNotFoundException, InstantiationException, ServletException, IllegalAccessException {
+    private void process(Socket socket) throws IOException, ClassNotFoundException, InstantiationException, ServletException, IllegalAccessException, InterruptedException {
         System.out.println("开始处理");
         httpRequest = new HttpRequest();
         httpResponse = new HttpResponse();

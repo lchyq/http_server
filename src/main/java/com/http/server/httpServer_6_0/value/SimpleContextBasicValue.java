@@ -8,6 +8,7 @@ import com.http.server.httpServer_5_0.simple.SimplePipeline;
 import com.http.server.httpServer_5_0.simple.SimpleWapper;
 import com.http.server.httpServer_6_0.rely.Containter;
 import com.http.server.httpServer_6_0.simple.SimpleContextPipeline;
+import com.http.server.httpServer_7_0.SimpleStandardWapper;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
@@ -23,9 +24,9 @@ public class SimpleContextBasicValue implements Value {
         this.simplePipeline = simplePipeline;
     }
     @Override
-    public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse, ValueContext valueContext) throws ClassNotFoundException, ServletException, IOException, IllegalAccessException, InstantiationException {
+    public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse, ValueContext valueContext) throws ClassNotFoundException, ServletException, IOException, IllegalAccessException, InstantiationException, InterruptedException {
         //获取子容器
-        SimpleWapper subContaintor = simplePipeline.getContainter().getMapper().map(httpRequest,httpResponse);
+        SimpleStandardWapper subContaintor = simplePipeline.getContainter().getMapper().map(httpRequest,httpResponse);
         if(subContaintor != null){
             subContaintor.invoke(httpRequest,httpResponse);
             valueContext.invokeNext(httpRequest,httpResponse);

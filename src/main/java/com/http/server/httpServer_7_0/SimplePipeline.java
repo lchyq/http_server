@@ -25,7 +25,7 @@ public class SimplePipeline {
     public SimplePipeline(Containter containter){
         this.containter = containter;
         values = new ArrayList<>();
-        basicValue = new BasicValue(this);
+        basicValue = new SimpleWapperBasicValue(this);
     }
     public void setBasicValue(Value basicValue){
         this.basicValue = basicValue;
@@ -48,7 +48,7 @@ public class SimplePipeline {
     public Containter getContainter(){
         return containter;
     }
-    public void invoke(HttpRequest httpRequest, HttpResponse httpResponse) throws ClassNotFoundException, InstantiationException, IllegalAccessException, ServletException, IOException {
+    public void invoke(HttpRequest httpRequest, HttpResponse httpResponse) throws ClassNotFoundException, InstantiationException, IllegalAccessException, ServletException, IOException, InterruptedException {
         new SimpleWapperValueContext().invokeNext(httpRequest,httpResponse);
     }
 
@@ -56,11 +56,11 @@ public class SimplePipeline {
     private class SimpleWapperValueContext implements ValueContext{
         int index= 0;
         @Override
-        public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+        public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, InterruptedException {
             int cur = index;
+            index = index + 1;
             if(cur < values.size()){
                 values.get(cur).invokeNext(httpRequest,httpResponse,this);
-                index ++;
             }else{
                 basicValue.invokeNext(httpRequest,httpResponse,this);
             }

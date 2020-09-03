@@ -16,4 +16,7 @@ public class GlobalApplicationFilterConfig {
     public List<ApplicationFilterConfig> getApplicationFilterConfigs(){
         return applicationFilterConfigs;
     }
+    public void addFilterConfig(ApplicationFilterConfig applicationFilterConfig){
+        applicationFilterConfigs.add(applicationFilterConfig);
+    }
 }

@@ -34,7 +34,7 @@ public class SimplePipeline {
     }
 
     //遍历阈
-    public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
+    public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, InterruptedException {
         new SimpleWapperValueContext().invokeNext(httpRequest,httpResponse);
     }
 
@@ -46,7 +46,7 @@ public class SimplePipeline {
     private class SimpleWapperValueContext implements ValueContext {
         private int stage = 0;
         @Override
-        public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+        public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, InterruptedException {
             int cur = stage;
             stage = stage + 1;
             if(cur < values.size()){

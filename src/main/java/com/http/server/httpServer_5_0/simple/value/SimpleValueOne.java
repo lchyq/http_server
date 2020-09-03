@@ -17,8 +17,8 @@ import java.io.IOException;
 public class SimpleValueOne implements Value {
 
     @Override
-    public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse, ValueContext valueContext) throws ServletException, IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
-        valueContext.invokeNext(httpRequest,httpResponse);
+    public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse, ValueContext valueContext) throws ServletException, IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, InterruptedException {
         System.out.println("前置阈-1-处理");
+        valueContext.invokeNext(httpRequest,httpResponse);
     }
 }

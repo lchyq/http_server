@@ -1,6 +1,5 @@
 package com.http.server.httpServer_7_0;
 
-import javax.servlet.Filter;
 import java.util.Map;
 
 /**
@@ -19,9 +18,6 @@ public class FilterDef {
     private String filterClass;
     //属性参数
     private Map<String,String> parameters;
-    //对应的 Filter 实例
-    //servlet 中的 filter 需要实现 javax.servlet.Filter
-    private Filter filter;
 
     public String getDesc() {
         return desc;
@@ -53,13 +49,5 @@ public class FilterDef {
 
     public void setParameters(Map<String, String> parameters) {
         this.parameters = parameters;
-    }
-
-    public Filter getFilter() {
-        return filter;
-    }
-
-    public void setFilter(Filter filter) {
-        this.filter = filter;
     }
 }

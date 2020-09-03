@@ -89,7 +89,7 @@ public class SimpleWapper {
     /**
      * wapper请求处理
      */
-    public void invoke(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+    public void invoke(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, InterruptedException {
         pipeline.invokeNext(httpRequest,httpResponse);
     }
 

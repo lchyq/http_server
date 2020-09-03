@@ -5,6 +5,7 @@ import com.http.server.httpServer_4_0.response.HttpResponse;
 import com.http.server.httpServer_5_0.simple.SimpleWapper;
 import com.http.server.httpServer_6_0.rely.Containter;
 import com.http.server.httpServer_6_0.rely.Mapper;
+import com.http.server.httpServer_7_0.SimpleStandardWapper;
 
 /**
  * 映射器
@@ -29,7 +30,7 @@ public class SimpleMapper implements Mapper {
     }
 
     @Override
-    public SimpleWapper map(HttpRequest httpRequest, HttpResponse httpResponse) {
+    public SimpleStandardWapper map(HttpRequest httpRequest, HttpResponse httpResponse) {
 //        String uri = httpRequest.getRequestURI();
         String uri = "/MyServlet";
         String requestPath = uri.substring(uri.indexOf("/"));

@@ -15,11 +15,15 @@ import java.net.URLClassLoader;
 public class SimpleLoader implements Loader {
     private ClassLoader classLoader;
     private static final String servletRoot = "D:\\httpserver\\src\\main\\java\\com\\http\\server\\httpserver2_0\\servlet";
+    private static final String filterRoot = "D:\\httpserver\\src\\main\\java\\com\\http\\server\\httpServer_7_0\\filter";
     public SimpleLoader() throws IOException {
-        URL[] urls = new URL[1];
-        File file = new File(servletRoot);
-        String rep = new URL("file",null,file.getCanonicalPath() + "\\").toString();
-        urls[0] = new URL(rep);
+        URL[] urls = new URL[2];
+        File servletFile = new File(servletRoot);
+        File filterFile = new File(filterRoot);
+        String servletRep = new URL("file",null,servletFile.getCanonicalPath() + "\\").toString();
+        String filterRep = new URL("file",null,filterFile.getCanonicalPath() + "\\").toString();
+        urls[0] = new URL(servletRep);
+        urls[1] = new URL(filterRep);
         classLoader = new URLClassLoader(urls);
     }
     @Override
@@ -31,7 +35,7 @@ public class SimpleLoader implements Loader {
     public Object load(String name) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         //根据name获取到servlet的全限定名
         //此处应该使用配置的方式，此处省略
-        name = "com.http.server.httpserver2_0.servlet.MyServlet";
+//        name = "com.http.server.httpserver2_0.servlet.MyServlet";
         Class clazz = classLoader.loadClass(name);
         return clazz.newInstance();
     }

@@ -2,7 +2,7 @@ package com.http.server.httpServer_6_0.rely;
 
 import com.http.server.httpServer_4_0.request.HttpRequest;
 import com.http.server.httpServer_4_0.response.HttpResponse;
-import com.http.server.httpServer_5_0.simple.SimpleWapper;
+import com.http.server.httpServer_7_0.SimpleStandardWapper;
 
 /**
  * Mapper接口
@@ -12,5 +12,5 @@ import com.http.server.httpServer_5_0.simple.SimpleWapper;
 public interface Mapper {
     Containter getContainer();
     void setContainer(Containter container);
-    SimpleWapper map(HttpRequest httpRequest, HttpResponse httpResponse);
+    SimpleStandardWapper map(HttpRequest httpRequest, HttpResponse httpResponse);
 }

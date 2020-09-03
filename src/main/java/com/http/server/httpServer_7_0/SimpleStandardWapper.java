@@ -2,14 +2,17 @@ package com.http.server.httpServer_7_0;
 
 import com.http.server.httpServer_4_0.request.HttpRequest;
 import com.http.server.httpServer_4_0.response.HttpResponse;
+import com.http.server.httpServer_5_0.rely.Value;
 import com.http.server.httpServer_5_0.simple.SimpleWapper;
 import com.http.server.httpServer_5_0.simple.loader.Loader;
 import com.http.server.httpServer_6_0.rely.Containter;
 import com.http.server.httpServer_6_0.rely.Mapper;
+import com.http.server.httpServer_7_0.filter.config.GlobalApplicationFilterConfig;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.util.Deque;
 import java.util.Stack;
 
 /**
@@ -40,7 +43,7 @@ public class SimpleStandardWapper implements Containter {
 
     public SimpleStandardWapper(){
         simplePipeline = new SimplePipeline(this);
-        simplePipeline.setBasicValue(new BasicValue(simplePipeline));
+        simplePipeline.setBasicValue(new SimpleWapperBasicValue(simplePipeline));
         servletPool = new Stack<>();
         STM = false;
     }
@@ -70,7 +73,7 @@ public class SimpleStandardWapper implements Containter {
     }
 
     @Override
-    public void invoke(HttpRequest httpRequest, HttpResponse httpResponse) throws ClassNotFoundException, IOException, InstantiationException, ServletException, IllegalAccessException {
+    public void invoke(HttpRequest httpRequest, HttpResponse httpResponse) throws ClassNotFoundException, IOException, InstantiationException, ServletException, IllegalAccessException, InterruptedException {
         simplePipeline.invoke(httpRequest,httpResponse);
     }
 
@@ -85,19 +88,30 @@ public class SimpleStandardWapper implements Containter {
     }
 
     @Override
-    public void addChild(String servletName, SimpleWapper containter) {
+    public void addChild(String servletName, SimpleStandardWapper containter) {
         throw new RuntimeException("illegal state！！");
     }
 
     @Override
-    public SimpleWapper findChild(String servletName) {
+    public SimpleStandardWapper findChild(String servletName) {
         throw new RuntimeException("illegal state！！");
+    }
+
+    @Override
+    public void setFilterConfig(GlobalApplicationFilterConfig globalApplicationFilterConfig) {
+
+    }
+
+    @Override
+    public GlobalApplicationFilterConfig getGlobalApplicationFilterConfig() {
+        return null;
     }
 
     public Servlet allocate() throws IllegalAccessException, InstantiationException, ClassNotFoundException, InterruptedException {
         if(!STM){
             if(servlet == null){
-                return (Servlet) getLoader().load(servletClass);
+                servlet =  (Servlet) getLoader().load(servletClass);
+                return servlet;
             }else{
                 return servlet;
             }
@@ -168,5 +182,12 @@ public class SimpleStandardWapper implements Containter {
 
     public void setMaxStmInstance(Integer maxStmInstance) {
         this.maxStmInstance = maxStmInstance;
+    }
+
+    public void addValue(Value value){
+        simplePipeline.addValue(value);
+    }
+    public void removeValue(Value value){
+        simplePipeline.removeValue(value);
     }
 }

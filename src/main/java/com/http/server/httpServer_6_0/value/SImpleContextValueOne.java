@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class SImpleContextValueOne implements Value {
     @Override
-    public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse, ValueContext valueContext) throws ClassNotFoundException, ServletException, IOException, IllegalAccessException, InstantiationException {
+    public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse, ValueContext valueContext) throws ClassNotFoundException, ServletException, IOException, IllegalAccessException, InstantiationException, InterruptedException {
         System.out.println("阈处理-1");
         valueContext.invokeNext(httpRequest,httpResponse);
     }

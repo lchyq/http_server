@@ -31,12 +31,11 @@ public class Request implements ServletRequest {
         for(int i = 0;i < ch;i++){
             request.append((char)data[i]);
         }
-//        System.out.println("receive: "+request.toString());
+        parseUri(request.toString());
         String[] ss = request.toString().split("\r\n");
         for(int i = 0;i < ss.length;i++){
             System.out.println(i + ":" + ss[i]);
         }
-        parseUri(request.toString());
     }
 
     private void parseUri(String uri){

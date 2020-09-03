@@ -14,5 +14,5 @@ import java.io.IOException;
  * @date 2020-07-28
  */
 public interface Value {
-    void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse,ValueContext valueContext) throws ClassNotFoundException, ServletException, IOException, IllegalAccessException, InstantiationException;
+    void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse,ValueContext valueContext) throws ClassNotFoundException, ServletException, IOException, IllegalAccessException, InstantiationException, InterruptedException;
 }

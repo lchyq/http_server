@@ -40,7 +40,7 @@ public class SimpleContextPipeline {
     }
 
     //阈遍历 处理请求
-    public void invoke(HttpRequest httpRequest, HttpResponse httpResponse) throws ClassNotFoundException, InstantiationException, IllegalAccessException, ServletException, IOException {
+    public void invoke(HttpRequest httpRequest, HttpResponse httpResponse) throws ClassNotFoundException, InstantiationException, IllegalAccessException, ServletException, IOException, InterruptedException {
         new SimpleContextValueContext().invokeNext(httpRequest,httpResponse);
     }
 
@@ -50,7 +50,7 @@ public class SimpleContextPipeline {
     private class SimpleContextValueContext implements ValueContext{
         int stage = 0;
         @Override
-        public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+        public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse) throws ServletException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, InterruptedException {
             int cur = stage;
             stage = stage + 1;
             if(cur < values.size()){
