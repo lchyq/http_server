@@ -43,6 +43,7 @@ public class BootStrap {
         SimpleValueTwo simpleValueTwo = new SimpleValueTwo();
         simpleWapper.addValue(simpleValueOne);
         simpleWapper.addValue(simpleValueTwo);
+        simpleWapper.setSTM(true);
 
         simpleContext.addServletMapping("/MyServlet",simpleWapper.getServletName());
 

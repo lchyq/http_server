@@ -52,7 +52,7 @@ public class HttpConnector implements Runnable, Lifecycle {
     //缓冲区大小
     private Integer bufferSize = 2048;
     //当前数量
-    private int curProcessor;
+    private int curProcessor = 1;
     @Override
     public void addLifecycleListener(LifecycleListener listener) {
 
@@ -99,10 +99,11 @@ public class HttpConnector implements Runnable, Lifecycle {
                     socket.close();
                     continue;
                 }
-                else if(curProcessor <= minProcessor){
+                else if(curProcessor < minProcessor){
                     httpProcessor = processorStack.pop();
+                    curProcessor ++;
                 }
-                else if(curProcessor >= minProcessor && curProcessor < maxProcessor){
+                else if(curProcessor < maxProcessor){
                     httpProcessor = new HttpProcessor(String.format("HttpProcess-%s-%s", ++curProcessor, port), port,this);
                     httpProcessor.start();
                 }
@@ -133,10 +134,12 @@ public class HttpConnector implements Runnable, Lifecycle {
         thread.start();
 
         //初始化 processor
-        while (curProcessor < minProcessor) {
-            HttpProcessor httpProcessor = new HttpProcessor(String.format("HttpProcess-%s-%s", ++curProcessor, port), port,this);
+        while (curProcessor <= minProcessor) {
+            HttpProcessor httpProcessor = new HttpProcessor(String.format("HttpProcess-%s-%s", curProcessor++, port), port,this);
             httpProcessor.start();
             recycle(httpProcessor);
+            if(curProcessor > minProcessor)
+                curProcessor = 0;
         }
     }
 

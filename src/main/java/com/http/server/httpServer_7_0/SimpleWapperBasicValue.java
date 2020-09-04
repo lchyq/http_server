@@ -25,9 +25,11 @@ public class SimpleWapperBasicValue implements Value {
     public void invokeNext(HttpRequest httpRequest, HttpResponse httpResponse, ValueContext valueContext) throws ClassNotFoundException, ServletException, IOException, IllegalAccessException, InstantiationException, InterruptedException {
         SimpleStandardWapper simpleStandardWapper = (SimpleStandardWapper)simplePipeline.getContainter();
         Servlet servlet = simpleStandardWapper.allocate();
+        System.out.println("servlet @ " + servlet);
         ApplicationFilterChain applicationFilterChain = createFilterChain();
         applicationFilterChain.setServlet(servlet);
         applicationFilterChain.doFilter(httpRequest,httpResponse);
+        simpleStandardWapper.recycle(servlet);
         valueContext.invokeNext(httpRequest,httpResponse);
 
     }

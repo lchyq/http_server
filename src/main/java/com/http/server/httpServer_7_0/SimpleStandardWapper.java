@@ -107,6 +107,14 @@ public class SimpleStandardWapper implements Containter {
         return null;
     }
 
+    /**
+     * 获取普通servlet 或者 stm servlet
+     * @return
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws ClassNotFoundException
+     * @throws InterruptedException
+     */
     public Servlet allocate() throws IllegalAccessException, InstantiationException, ClassNotFoundException, InterruptedException {
         if(!STM){
             if(servlet == null){
@@ -117,7 +125,7 @@ public class SimpleStandardWapper implements Containter {
             }
         }else{
             synchronized (servletPool){
-                if(countStmServlets < nStmInstance){
+                if(countStmServlets <= nStmInstance){
                     servletPool.push((Servlet) getLoader().load(servletClass));
                     nStmInstance ++;
                 }
@@ -132,6 +140,17 @@ public class SimpleStandardWapper implements Containter {
                 countStmServlets ++;
                 nStmInstance --;
                 return servletPool.pop();
+            }
+        }
+    }
+    public void recycle(Servlet servlet) throws InterruptedException {
+        if(STM){
+            synchronized (servletPool){
+                if(servletPool.size() >= servletPool.size()){
+                    servletPool.wait();
+                }else{
+                    servletPool.push(servlet);
+                }
             }
         }
     }

@@ -41,7 +41,8 @@ public class ApplicationFilterChain implements FilterChain {
         if (iterator.hasNext()){
             Filter filter = iterator.next();
             filter.doFilter(servletRequest,servletResponse,this);
+        }else{
+            servlet.service(servletRequest,servletResponse);
         }
-        servlet.service(servletRequest,servletResponse);
     }
 }

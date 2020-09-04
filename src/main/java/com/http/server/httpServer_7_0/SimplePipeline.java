@@ -61,7 +61,7 @@ public class SimplePipeline {
             index = index + 1;
             if(cur < values.size()){
                 values.get(cur).invokeNext(httpRequest,httpResponse,this);
-            }else{
+            }else if(cur == values.size()){
                 basicValue.invokeNext(httpRequest,httpResponse,this);
             }
         }
