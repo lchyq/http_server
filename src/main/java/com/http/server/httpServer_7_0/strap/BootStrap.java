@@ -2,7 +2,6 @@ package com.http.server.httpServer_7_0.strap;
 
 import com.http.server.httpServer_4_0.HttpConnector;
 import com.http.server.httpServer_4_0.rely.LifecycleException;
-import com.http.server.httpServer_5_0.simple.SimpleWapper;
 import com.http.server.httpServer_5_0.simple.loader.SimpleLoader;
 import com.http.server.httpServer_5_0.simple.value.SimpleValueOne;
 import com.http.server.httpServer_5_0.simple.value.SimpleValueTwo;
@@ -69,7 +68,6 @@ public class BootStrap {
         httpConnector.setContainer(simpleContext);
         httpConnector.init();
         httpConnector.connectorStart();
-
         System.in.read();
     }
 }
