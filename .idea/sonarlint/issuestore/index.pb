@@ -81,3 +81,15 @@ v
 Fsrc/main/java/com/http/server/httpServer_7_0/SimpleStandardWapper.java,f\0\f0a32bf1e47f3a098a328c3df7a90f6fa3aaada0
 q
 Asrc/main/java/com/http/server/httpServer_7_0/strap/BootStrap.java,3\b\3bc05f0df852c9e935ed24a06a17633d128b2d3b
+o
+?src/main/java/com/http/server/httpserver_3_0/HttpConnector.java,c\6\c601b64377932c5d1b36d700a836da901359ee92
+}
+Msrc/main/java/com/http/server/httpserver_8_0/load/resource/ResourceEntry.java,8\e\8edcd6674d9af9231c0bc8780cb534662d84e2c0
+m
+=src/main/java/com/http/server/httpserver_8_0/load/Loader.java,e\0\e0966b6d02ab25bfc6fd1805af6b3427033dec3d
+x
+Hsrc/main/java/com/http/server/httpserver_8_0/load/WebAppClassLoader.java,9\7\97ca4738e3e66038cd9bc80796e8e69edf6d331e
+q
+Asrc/main/java/com/http/server/httpserver2_0/ServletProcesser.java,8\c\8c29b726ec5d1328c3d897bfcd6d263225df5c63
+|
+Lsrc/main/java/com/http/server/httpserver_8_0/load/standard/WebAppLoader.java,5\5\55cfb90495e60c463fa6481ace2b67b4d26ef631
