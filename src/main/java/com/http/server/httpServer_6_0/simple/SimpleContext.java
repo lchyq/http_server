@@ -9,7 +9,11 @@ import com.http.server.httpServer_6_0.rely.Containter;
 import com.http.server.httpServer_6_0.rely.Mapper;
 import com.http.server.httpServer_7_0.SimpleStandardWapper;
 import com.http.server.httpServer_7_0.filter.config.GlobalApplicationFilterConfig;
+import com.http.server.httpserver_8_0.load.resource.ResourceDirContext;
+import com.http.server.httpserver_8_0.load.standard.ApplicationContext;
 
+import javax.naming.directory.DirContext;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.util.HashMap;
@@ -34,6 +38,9 @@ public class SimpleContext implements Containter {
     //wapper映射
     private Map<String, SimpleStandardWapper> wapperMapping;
     private GlobalApplicationFilterConfig globalApplicationFilterConfig;
+    //servlet context
+    private ApplicationContext context;
+    private DirContext resource;
 
     public SimpleContext(){
         simpleContextPipeline = new SimpleContextPipeline(this);
@@ -108,6 +115,22 @@ public class SimpleContext implements Containter {
     @Override
     public GlobalApplicationFilterConfig getGlobalApplicationFilterConfig() {
         return this.globalApplicationFilterConfig;
+    }
+
+    @Override
+    public ServletContext getServletContext() {
+        if(context == null){
+            context = new ApplicationContext();
+        }
+        return context.getContext();
+    }
+
+    @Override
+    public DirContext getResource() {
+        if(resource != null)
+            return resource;
+        resource = new ResourceDirContext();
+        return resource;
     }
 
     public void addValue(Value value){

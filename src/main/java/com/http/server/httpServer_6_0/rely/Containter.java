@@ -7,6 +7,8 @@ import com.http.server.httpServer_5_0.simple.loader.Loader;
 import com.http.server.httpServer_7_0.SimpleStandardWapper;
 import com.http.server.httpServer_7_0.filter.config.GlobalApplicationFilterConfig;
 
+import javax.naming.directory.DirContext;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import java.io.IOException;
 
@@ -30,5 +32,8 @@ public interface Containter {
     //TODO 设置全局filter 配置,咱不了解tomcat是如何实现的
     void setFilterConfig(GlobalApplicationFilterConfig globalApplicationFilterConfig);
     GlobalApplicationFilterConfig getGlobalApplicationFilterConfig();
+    //获取servlet上下文
+    ServletContext getServletContext();
+    DirContext getResource();
 
 }

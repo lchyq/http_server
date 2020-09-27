@@ -9,7 +9,9 @@ import com.http.server.httpServer_6_0.rely.Containter;
 import com.http.server.httpServer_6_0.rely.Mapper;
 import com.http.server.httpServer_7_0.filter.config.GlobalApplicationFilterConfig;
 
+import javax.naming.directory.DirContext;
 import javax.servlet.Servlet;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.util.Deque;
@@ -104,6 +106,16 @@ public class SimpleStandardWapper implements Containter {
 
     @Override
     public GlobalApplicationFilterConfig getGlobalApplicationFilterConfig() {
+        return null;
+    }
+
+    @Override
+    public ServletContext getServletContext() {
+        return null;
+    }
+
+    @Override
+    public DirContext getResource() {
         return null;
     }
 

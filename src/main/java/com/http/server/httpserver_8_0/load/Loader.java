@@ -1,5 +1,8 @@
 package com.http.server.httpserver_8_0.load;
 
+import com.http.server.httpServer_6_0.rely.Containter;
+
+import javax.naming.NamingException;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
@@ -18,10 +21,14 @@ public interface Loader {
     void setClassLoaderString(String classLoaderString);
     //获取内部来加载器，在tmocat实现中自定义类加载必须是 WebAppClassLoader 子类
     //这里模拟实现
-    WebAppClassLoader getWebAppClassLoader() throws IllegalAccessException, InstantiationException, ClassNotFoundException, IOException, NoSuchMethodException, InvocationTargetException;
+    WebAppClassLoader createWebAppClassLoader() throws IllegalAccessException, InstantiationException, ClassNotFoundException, IOException, NoSuchMethodException, InvocationTargetException, NamingException;
     //是否委托给父类加载器
     boolean delegate();
     //设置是否委托给父类加载器
     void setDelegate(boolean delegate);
     Class load(String name) throws ClassNotFoundException;
+    String[] findRepositories();
+    void addRepository(String path);
+    void setContainr(Containter containr);
+    Containter getContainer();
 }
